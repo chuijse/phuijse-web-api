@@ -46,7 +46,15 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'authors',
+      authors: 'authors',
+      year: 'year',
+    },
+    prepare(selection) {
+      const {title, authors, year} = selection
+      return {
+        title: title,
+        subtitle: `${year}: ${authors}`,
+      }
     },
   },
 })
