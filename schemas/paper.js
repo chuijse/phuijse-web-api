@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'selected',
+      title: 'Selected',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'authors',
       title: 'Authors',
       type: 'string',
